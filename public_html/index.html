@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+    Created on : 31/01/2019, 11:09:00 AM
+    Author     : Ricardo Presilla.
+    Licencia GNU.
+-->
+<html>
+    <head>
+        <title>Vue.js</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- development version, includes helpful console warnings -->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>        
+        <link href="css/estilos.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div id="blog-post-demo">
+            <p>Componentes individuales</p>
+            <blog-post title="My journey with Vue"></blog-post>
+            <blog-post title="Blogging with Vue"></blog-post>
+            <blog-post title="Why Vue is so fun"></blog-post>
+        </div>
+        <div id="blog-post-demo2">
+            <p>Uso de componentes con el v-for</p>
+            <blog-post
+                v-for="post in posts"
+                v-bind:key="post.id"
+                v-bind:title="post.title"
+            ></blog-post>
+        </div>
+        <script src="js/main.js" type="text/javascript"></script>
+    </body>
+</html>
